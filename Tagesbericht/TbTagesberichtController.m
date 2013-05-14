@@ -55,14 +55,14 @@
 {
     self.duplicateButtonItem.enabled = NO;
     if (self.tagesbericht.datum) {
-        NSDate *now = [[NSDate alloc] init];
-        NSCalendar *gregorianCalendar =
-        [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents *components = [gregorianCalendar components:NSDayCalendarUnit
-                                                            fromDate:self.tagesbericht.datum
-                                                              toDate:now
-                                                             options:0];
-        if ([components day] > 0) {
+        NSDate *nowDate = [[NSDate alloc] init];
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"dd.MM.YYYY"];
+        NSString *datumStringThen = [dateFormat stringFromDate:self.tagesbericht.datum];
+        NSString *datumStringNow = [dateFormat stringFromDate:nowDate];
+        
+        if (![datumStringNow isEqualToString:datumStringThen]) {
             self.duplicateButtonItem.enabled = YES;
         }
     }
