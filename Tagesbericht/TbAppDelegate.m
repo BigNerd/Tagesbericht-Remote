@@ -2,26 +2,20 @@
 //  TbAppDelegate.m
 //  Tagesbericht
 //
-//  Created by Matthias Burbach on 14.05.13.
+//  Created by Matthias Burbach on 21.04.13.
 //  Copyright (c) 2013 Matthias Burbach. All rights reserved.
 //
 
 #import "TbAppDelegate.h"
-
-#import "TbMasterViewController.h"
+#import "NSManagedObjectModel+KCOrderedAccessorFix.h"
 
 @implementation TbAppDelegate
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    TbMasterViewController *controller = (TbMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    [self configureCoreData];
+    [self loadTagesberichte];
     return YES;
 }
 							
@@ -35,6 +29,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [self saveTagesberichte];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -49,103 +45,156 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
-}
-
-- (void)saveContext
-{
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        } 
-    }
-}
-
-#pragma mark - Core Data stack
-
-// Returns the managed object context for the application.
-// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-- (NSManagedObjectContext *)managedObjectContext
-{
-    if (_managedObjectContext != nil) {
-        return _managedObjectContext;
-    }
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    return _managedObjectContext;
+    [self saveTagesberichte];
 }
 
-// Returns the managed object model for the application.
-// If the model doesn't already exist, it is created from the application's model.
-- (NSManagedObjectModel *)managedObjectModel
+- (NSString*)docsDir
 {
-    if (_managedObjectModel != nil) {
-        return _managedObjectModel;
-    }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Tagesbericht" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return _managedObjectModel;
+    NSArray *paths =
+        NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    return [paths objectAtIndex:0];
 }
 
-// Returns the persistent store coordinator for the application.
-// If the coordinator doesn't already exist, it is created and the application's store added to it.
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+- (NSPersistentStoreCoordinator*)dataStoreForModel:(NSManagedObjectModel*)model filename:(NSString*)filename
 {
-    if (_persistentStoreCoordinator != nil) {
-        return _persistentStoreCoordinator;
+    NSURL* storeLocation =
+        [NSURL fileURLWithPath:[[self docsDir] stringByAppendingPathComponent:filename]];
+    
+    NSPersistentStoreCoordinator* store =
+        [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    
+    NSDictionary *options =
+        [NSDictionary dictionaryWithObjectsAndKeys:
+            [NSNumber numberWithBool:YES],
+            NSMigratePersistentStoresAutomaticallyOption,
+            [NSNumber numberWithBool:YES],
+            NSInferMappingModelAutomaticallyOption, nil];
+    
+    NSError* error;
+    if (![store
+          addPersistentStoreWithType:NSSQLiteStoreType
+          configuration:nil
+          URL:storeLocation
+          options:options
+          error:&error])
+    {
+        NSLog(@"Error initalizing Data Store: %@",
+              [error localizedDescription]);
+        return nil;
     }
-    
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Tagesbericht.sqlite"];
-    
-    NSError *error = nil;
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         
-         Typical reasons for an error here include:
-         * The persistent store is not accessible;
-         * The schema for the persistent store is incompatible with current managed object model.
-         Check the error message to determine what the actual problem was.
-         
-         
-         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
-         
-         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
-         * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
-         
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
-         @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
-         
-         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
-         
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }    
-    
-    return _persistentStoreCoordinator;
+    return store;
 }
 
-#pragma mark - Application's Documents directory
-
-// Returns the URL to the application's Documents directory.
-- (NSURL *)applicationDocumentsDirectory
+-(void)configureCoreData
 {
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    self.dataModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    [self.dataModel kc_generateOrderedSetAccessors];
+    self.dataStore = [self dataStoreForModel:self.dataModel filename:@"Tagesbericht.sqlite"];
+    self.dataContext = [[NSManagedObjectContext alloc] init];
+    [self.dataContext setPersistentStoreCoordinator:self.dataStore];
+}
+
+-(void)loadTagesberichte
+{
+    NSEntityDescription *entityDescription =
+        [NSEntityDescription entityForName:@"Tagesbericht" inManagedObjectContext:self.dataContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    
+    // Set example predicate and sort orderings...
+    /*
+    NSNumber *minimumSalary = ...;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:
+                              @"(lastName LIKE[c] 'Worsley') AND (salary > %@)", minimumSalary];
+    [request setPredicate:predicate];
+    */
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                        initWithKey:@"datum" ascending:NO];
+    [request setSortDescriptors:@[sortDescriptor]];
+    
+    NSError *error;
+    NSArray *array = [self.dataContext executeFetchRequest:request error:&error];
+    if (array == nil) {
+        NSLog(@"Error loading Tagesberichte.");
+    } else {
+        NSLog(@"Loaded Tagesberichte.");
+        self.tagesberichte = [NSMutableArray arrayWithArray:array];
+    }
+}
+
+-(void)saveTagesberichte
+{
+    NSError *error;
+    if (![self.dataContext save:&error]) {
+        NSLog(@"Error saving Tagesberichte.");
+    } else {
+        NSLog(@"Saved Tagesberichte.");
+    }
+}
+
+- (Tagesbericht *)createTagesbericht
+{
+    Tagesbericht *tagesbericht =
+        [NSEntityDescription
+            insertNewObjectForEntityForName:@"Tagesbericht"
+            inManagedObjectContext:self.dataContext];
+    return tagesbericht;
+}
+
+- (void)deleteTagesbericht:(Tagesbericht *)tagesbericht
+{
+    [[self dataContext] deleteObject:tagesbericht];
+}
+
+- (Leistung *)createLeistung
+{
+    Leistung *leistung =
+        [NSEntityDescription
+            insertNewObjectForEntityForName:@"Leistung"
+            inManagedObjectContext:self.dataContext];
+    return leistung;
+}
+
+- (void)deleteLeistung:(Leistung *)leistung
+{
+    [[self dataContext] deleteObject:leistung];
+}
+
+- (NSArray *)alleNamen
+{
+    NSMutableOrderedSet *result = [[NSMutableOrderedSet alloc] init];
+    for (Tagesbericht* tagesbericht in self.tagesberichte) {
+        for (Leistung* leistung in tagesbericht.leistungen) {
+            if (leistung.name) {
+                [result addObject:leistung.name];
+            }
+        }
+    }
+    return [result array];
+}
+
+- (NSArray *)alleBeschreibungenForLeistungsart:(enum Leistungsart)leistungsart
+{
+    NSMutableOrderedSet *result = [[NSMutableOrderedSet alloc] init];
+    for (Tagesbericht* tagesbericht in self.tagesberichte) {
+        NSOrderedSet *leistungen;
+        if (leistungsart == Lst_Leistung) {
+            leistungen = tagesbericht.leistungen;
+        } else if (leistungsart == Lst_Maschine) {
+            leistungen = tagesbericht.maschinen;
+        } else { // leistungsart == Lst_Material
+            leistungen = tagesbericht.material;
+        }
+        for (Leistung* leistung in leistungen) {
+            if (leistung.beschreibung) {
+                [result addObject:leistung.beschreibung];
+            }
+        }
+    }
+    return [result array];
 }
 
 @end
