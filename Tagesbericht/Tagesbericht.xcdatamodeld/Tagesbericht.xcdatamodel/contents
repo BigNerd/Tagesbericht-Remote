@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Leistung" representedClassName="Leistung" syncable="YES">
+        <attribute name="art" attributeType="Integer 16" minValueString="0" maxValueString="2" defaultValueString="0" syncable="YES"/>
+        <attribute name="beschreibung" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minuten" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="leistungenTagesbericht" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tagesbericht" inverseName="leistungen" inverseEntity="Tagesbericht" syncable="YES"/>
+        <relationship name="maschinenTagesbericht" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tagesbericht" inverseName="maschinen" inverseEntity="Tagesbericht" syncable="YES"/>
+        <relationship name="materialTagesbericht" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tagesbericht" inverseName="material" inverseEntity="Tagesbericht" syncable="YES"/>
+    </entity>
+    <entity name="Tagesbericht" representedClassName="Tagesbericht" syncable="YES">
+        <attribute name="auftraggeber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baustelle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="datum" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="notizen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unterschrift" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="zuletztGeaendert" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="zuletztGesendet" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="leistungen" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Leistung" inverseName="leistungenTagesbericht" inverseEntity="Leistung" syncable="YES"/>
+        <relationship name="maschinen" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Leistung" inverseName="maschinenTagesbericht" inverseEntity="Leistung" syncable="YES"/>
+        <relationship name="material" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Leistung" inverseName="materialTagesbericht" inverseEntity="Leistung" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Tagesbericht" positionX="-126" positionY="-108" width="128" height="193"/>
+        <element name="Leistung" positionX="214" positionY="-63" width="128" height="148"/>
     </elements>
 </model>
