@@ -13,20 +13,45 @@
 		8282FD4817421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
 		8282FD4E17421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD4C17421C8100973852 /* InfoPlist.strings */; };
 		8282FD5017421C8100973852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD4F17421C8100973852 /* main.m */; };
-		8282FD5417421C8100973852 /* TbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD5317421C8100973852 /* TbAppDelegate.m */; };
 		8282FD5617421C8100973852 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5517421C8100973852 /* Default.png */; };
 		8282FD5817421C8100973852 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5717421C8100973852 /* Default@2x.png */; };
 		8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5917421C8100973852 /* Default-568h@2x.png */; };
-		8282FD5D17421C8100973852 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5B17421C8100973852 /* MainStoryboard.storyboard */; };
-		8282FD6017421C8100973852 /* Tagesbericht.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */; };
-		8282FD6317421C8100973852 /* TbMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD6217421C8100973852 /* TbMasterViewController.m */; };
-		8282FD6617421C8100973852 /* TbDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD6517421C8100973852 /* TbDetailViewController.m */; };
 		8282FD6E17421C8100973852 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD6D17421C8100973852 /* SenTestingKit.framework */; };
 		8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
 		8282FD7017421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
 		8282FD7117421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
 		8282FD7917421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD7717421C8100973852 /* InfoPlist.strings */; };
 		8282FD7C17421C8100973852 /* TagesberichtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD7B17421C8100973852 /* TagesberichtTests.m */; };
+		8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE517421F3200973852 /* InfoPlist.strings */; };
+		8282FE1C17421F3200973852 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE717421F3200973852 /* MainStoryboard.storyboard */; };
+		8282FE1D17421F3200973852 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE917421F3200973852 /* Icon.png */; };
+		8282FE1E17421F3200973852 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDEA17421F3200973852 /* Icon@2x.png */; };
+		8282FE1F17421F3200973852 /* Leistung.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDEC17421F3200973852 /* Leistung.m */; };
+		8282FE2017421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDEE17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m */; };
+		8282FE2117421F3200973852 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDEF17421F3200973852 /* Settings.bundle */; };
+		8282FE2217421F3200973852 /* Tagesbericht-Html.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDF017421F3200973852 /* Tagesbericht-Html.mustache */; };
+		8282FE2317421F3200973852 /* Tagesbericht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDF217421F3200973852 /* Tagesbericht.m */; };
+		8282FE2417421F3200973852 /* Tagesbericht.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDF317421F3200973852 /* Tagesbericht.xcdatamodeld */; };
+		8282FE2517421F3200973852 /* TbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDF617421F3200973852 /* TbAppDelegate.m */; };
+		8282FE2617421F3200973852 /* TbAuftraggeberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDF817421F3200973852 /* TbAuftraggeberController.m */; };
+		8282FE2717421F3200973852 /* TbBaustelleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFA17421F3200973852 /* TbBaustelleController.m */; };
+		8282FE2817421F3200973852 /* TbCanvasImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFC17421F3200973852 /* TbCanvasImageView.m */; };
+		8282FE2917421F3200973852 /* TbDatumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFE17421F3200973852 /* TbDatumController.m */; };
+		8282FE2A17421F3200973852 /* TbLeistung.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0017421F3200973852 /* TbLeistung.m */; };
+		8282FE2B17421F3200973852 /* TbLeistungBeschreibungController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */; };
+		8282FE2C17421F3200973852 /* TbLeistungController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0417421F3200973852 /* TbLeistungController.m */; };
+		8282FE2D17421F3200973852 /* TbLeistungListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0617421F3200973852 /* TbLeistungListController.m */; };
+		8282FE2E17421F3200973852 /* TbLeistungNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0817421F3200973852 /* TbLeistungNameController.m */; };
+		8282FE2F17421F3200973852 /* TbLeistungStundenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0A17421F3200973852 /* TbLeistungStundenController.m */; };
+		8282FE3017421F3200973852 /* TbObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0C17421F3200973852 /* TbObjectController.m */; };
+		8282FE3217421F3200973852 /* TbObjectListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1017421F3200973852 /* TbObjectListController.m */; };
+		8282FE3317421F3200973852 /* TbTagesbericht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1217421F3200973852 /* TbTagesbericht.m */; };
+		8282FE3417421F3200973852 /* TbTagesberichtController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1417421F3200973852 /* TbTagesberichtController.m */; };
+		8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1617421F3200973852 /* TbTagesberichtListController.m */; };
+		8282FE3617421F3200973852 /* TbTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1817421F3200973852 /* TbTextController.m */; };
+		8282FE3717421F3200973852 /* TbUnterschriftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1A17421F3200973852 /* TbUnterschriftController.m */; };
+		8282FE3C1742238F00973852 /* libGRMustache6-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */; };
+		8282FE4E17422B2600973852 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FE4D17422B2600973852 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,23 +74,81 @@
 		8282FD4D17421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8282FD4F17421C8100973852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tagesbericht-Prefix.pch"; sourceTree = "<group>"; };
-		8282FD5217421C8100973852 /* TbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbAppDelegate.h; sourceTree = "<group>"; };
-		8282FD5317421C8100973852 /* TbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbAppDelegate.m; sourceTree = "<group>"; };
 		8282FD5517421C8100973852 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8282FD5717421C8100973852 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8282FD5917421C8100973852 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8282FD5C17421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tagesbericht.xcdatamodel; sourceTree = "<group>"; };
-		8282FD6117421C8100973852 /* TbMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbMasterViewController.h; sourceTree = "<group>"; };
-		8282FD6217421C8100973852 /* TbMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbMasterViewController.m; sourceTree = "<group>"; };
-		8282FD6417421C8100973852 /* TbDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbDetailViewController.h; sourceTree = "<group>"; };
-		8282FD6517421C8100973852 /* TbDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbDetailViewController.m; sourceTree = "<group>"; };
 		8282FD6C17421C8100973852 /* TagesberichtTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagesberichtTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8282FD6D17421C8100973852 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8282FD7617421C8100973852 /* TagesberichtTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TagesberichtTests-Info.plist"; sourceTree = "<group>"; };
 		8282FD7817421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8282FD7A17421C8100973852 /* TagesberichtTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagesberichtTests.h; sourceTree = "<group>"; };
 		8282FD7B17421C8100973852 /* TagesberichtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagesberichtTests.m; sourceTree = "<group>"; };
+		8282FDE617421F3200973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8282FDE817421F3200973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8282FDE917421F3200973852 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8282FDEA17421F3200973852 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		8282FDEB17421F3200973852 /* Leistung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leistung.h; sourceTree = "<group>"; };
+		8282FDEC17421F3200973852 /* Leistung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Leistung.m; sourceTree = "<group>"; };
+		8282FDED17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+KCOrderedAccessorFix.h"; sourceTree = "<group>"; };
+		8282FDEE17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+KCOrderedAccessorFix.m"; sourceTree = "<group>"; };
+		8282FDEF17421F3200973852 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		8282FDF017421F3200973852 /* Tagesbericht-Html.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Tagesbericht-Html.mustache"; sourceTree = "<group>"; };
+		8282FDF117421F3200973852 /* Tagesbericht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tagesbericht.h; sourceTree = "<group>"; };
+		8282FDF217421F3200973852 /* Tagesbericht.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tagesbericht.m; sourceTree = "<group>"; };
+		8282FDF417421F3200973852 /* Tagesbericht.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tagesbericht.xcdatamodel; sourceTree = "<group>"; };
+		8282FDF517421F3200973852 /* TbAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbAppDelegate.h; sourceTree = "<group>"; };
+		8282FDF617421F3200973852 /* TbAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbAppDelegate.m; sourceTree = "<group>"; };
+		8282FDF717421F3200973852 /* TbAuftraggeberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbAuftraggeberController.h; sourceTree = "<group>"; };
+		8282FDF817421F3200973852 /* TbAuftraggeberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbAuftraggeberController.m; sourceTree = "<group>"; };
+		8282FDF917421F3200973852 /* TbBaustelleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbBaustelleController.h; sourceTree = "<group>"; };
+		8282FDFA17421F3200973852 /* TbBaustelleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbBaustelleController.m; sourceTree = "<group>"; };
+		8282FDFB17421F3200973852 /* TbCanvasImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbCanvasImageView.h; sourceTree = "<group>"; };
+		8282FDFC17421F3200973852 /* TbCanvasImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbCanvasImageView.m; sourceTree = "<group>"; };
+		8282FDFD17421F3200973852 /* TbDatumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbDatumController.h; sourceTree = "<group>"; };
+		8282FDFE17421F3200973852 /* TbDatumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbDatumController.m; sourceTree = "<group>"; };
+		8282FDFF17421F3200973852 /* TbLeistung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistung.h; sourceTree = "<group>"; };
+		8282FE0017421F3200973852 /* TbLeistung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistung.m; sourceTree = "<group>"; };
+		8282FE0117421F3200973852 /* TbLeistungBeschreibungController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungBeschreibungController.h; sourceTree = "<group>"; };
+		8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungBeschreibungController.m; sourceTree = "<group>"; };
+		8282FE0317421F3200973852 /* TbLeistungController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungController.h; sourceTree = "<group>"; };
+		8282FE0417421F3200973852 /* TbLeistungController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungController.m; sourceTree = "<group>"; };
+		8282FE0517421F3200973852 /* TbLeistungListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungListController.h; sourceTree = "<group>"; };
+		8282FE0617421F3200973852 /* TbLeistungListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungListController.m; sourceTree = "<group>"; };
+		8282FE0717421F3200973852 /* TbLeistungNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungNameController.h; sourceTree = "<group>"; };
+		8282FE0817421F3200973852 /* TbLeistungNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungNameController.m; sourceTree = "<group>"; };
+		8282FE0917421F3200973852 /* TbLeistungStundenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungStundenController.h; sourceTree = "<group>"; };
+		8282FE0A17421F3200973852 /* TbLeistungStundenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungStundenController.m; sourceTree = "<group>"; };
+		8282FE0B17421F3200973852 /* TbObjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbObjectController.h; sourceTree = "<group>"; };
+		8282FE0C17421F3200973852 /* TbObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbObjectController.m; sourceTree = "<group>"; };
+		8282FE0F17421F3200973852 /* TbObjectListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbObjectListController.h; sourceTree = "<group>"; };
+		8282FE1017421F3200973852 /* TbObjectListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbObjectListController.m; sourceTree = "<group>"; };
+		8282FE1117421F3200973852 /* TbTagesbericht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesbericht.h; sourceTree = "<group>"; };
+		8282FE1217421F3200973852 /* TbTagesbericht.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTagesbericht.m; sourceTree = "<group>"; };
+		8282FE1317421F3200973852 /* TbTagesberichtController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesberichtController.h; sourceTree = "<group>"; };
+		8282FE1417421F3200973852 /* TbTagesberichtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTagesberichtController.m; sourceTree = "<group>"; };
+		8282FE1517421F3200973852 /* TbTagesberichtListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesberichtListController.h; sourceTree = "<group>"; };
+		8282FE1617421F3200973852 /* TbTagesberichtListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTagesberichtListController.m; sourceTree = "<group>"; };
+		8282FE1717421F3200973852 /* TbTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTextController.h; sourceTree = "<group>"; };
+		8282FE1817421F3200973852 /* TbTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTextController.m; sourceTree = "<group>"; };
+		8282FE1917421F3200973852 /* TbUnterschriftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbUnterschriftController.h; sourceTree = "<group>"; };
+		8282FE1A17421F3200973852 /* TbUnterschriftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbUnterschriftController.m; sourceTree = "<group>"; };
+		8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libGRMustache6-iOS.a"; path = "../../GRMustache/lib/libGRMustache6-iOS.a"; sourceTree = "<group>"; };
+		8282FE3E17422B0000973852 /* GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustache.h; sourceTree = "<group>"; };
+		8282FE3F17422B0000973852 /* GRMustacheAvailabilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheAvailabilityMacros.h; sourceTree = "<group>"; };
+		8282FE4017422B0000973852 /* GRMustacheConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheConfiguration.h; sourceTree = "<group>"; };
+		8282FE4117422B0000973852 /* GRMustacheContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheContext.h; sourceTree = "<group>"; };
+		8282FE4217422B0000973852 /* GRMustacheError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheError.h; sourceTree = "<group>"; };
+		8282FE4317422B0000973852 /* GRMustacheFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheFilter.h; sourceTree = "<group>"; };
+		8282FE4417422B0000973852 /* GRMustacheLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheLocalizer.h; sourceTree = "<group>"; };
+		8282FE4517422B0000973852 /* GRMustacheRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheRendering.h; sourceTree = "<group>"; };
+		8282FE4617422B0000973852 /* GRMustacheTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTag.h; sourceTree = "<group>"; };
+		8282FE4717422B0000973852 /* GRMustacheTagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTagDelegate.h; sourceTree = "<group>"; };
+		8282FE4817422B0000973852 /* GRMustacheTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplate.h; sourceTree = "<group>"; };
+		8282FE4917422B0000973852 /* GRMustacheTemplateRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheTemplateRepository.h; sourceTree = "<group>"; };
+		8282FE4A17422B0000973852 /* GRMustacheVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRMustacheVersion.h; sourceTree = "<group>"; };
+		8282FE4B17422B0000973852 /* NSFormatter+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFormatter+GRMustache.h"; sourceTree = "<group>"; };
+		8282FE4C17422B0000973852 /* NSValueTransformer+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GRMustache.h"; sourceTree = "<group>"; };
+		8282FE4D17422B2600973852 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +156,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8282FE4E17422B2600973852 /* MessageUI.framework in Frameworks */,
+				8282FE3C1742238F00973852 /* libGRMustache6-iOS.a in Frameworks */,
 				8282FD4217421C8100973852 /* UIKit.framework in Frameworks */,
 				8282FD4417421C8100973852 /* Foundation.framework in Frameworks */,
 				8282FD4617421C8100973852 /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +182,7 @@
 		8282FD3517421C8100973852 = {
 			isa = PBXGroup;
 			children = (
+				8282FE4D17422B2600973852 /* MessageUI.framework */,
 				8282FD4917421C8100973852 /* Tagesbericht */,
 				8282FD7417421C8100973852 /* TagesberichtTests */,
 				8282FD4017421C8100973852 /* Frameworks */,
@@ -116,6 +202,7 @@
 		8282FD4017421C8100973852 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */,
 				8282FD4117421C8100973852 /* UIKit.framework */,
 				8282FD4317421C8100973852 /* Foundation.framework */,
 				8282FD4517421C8100973852 /* CoreGraphics.framework */,
@@ -128,14 +215,53 @@
 		8282FD4917421C8100973852 /* Tagesbericht */ = {
 			isa = PBXGroup;
 			children = (
-				8282FD5217421C8100973852 /* TbAppDelegate.h */,
-				8282FD5317421C8100973852 /* TbAppDelegate.m */,
-				8282FD5B17421C8100973852 /* MainStoryboard.storyboard */,
-				8282FD6117421C8100973852 /* TbMasterViewController.h */,
-				8282FD6217421C8100973852 /* TbMasterViewController.m */,
-				8282FD6417421C8100973852 /* TbDetailViewController.h */,
-				8282FD6517421C8100973852 /* TbDetailViewController.m */,
-				8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */,
+				8282FE3D17422B0000973852 /* include */,
+				8282FDE717421F3200973852 /* MainStoryboard.storyboard */,
+				8282FDF317421F3200973852 /* Tagesbericht.xcdatamodeld */,
+				8282FDEF17421F3200973852 /* Settings.bundle */,
+				8282FDE417421F3200973852 /* en.lproj */,
+				8282FDED17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.h */,
+				8282FDEE17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m */,
+				8282FDF117421F3200973852 /* Tagesbericht.h */,
+				8282FDF217421F3200973852 /* Tagesbericht.m */,
+				8282FDEB17421F3200973852 /* Leistung.h */,
+				8282FDEC17421F3200973852 /* Leistung.m */,
+				8282FDF517421F3200973852 /* TbAppDelegate.h */,
+				8282FDF617421F3200973852 /* TbAppDelegate.m */,
+				8282FDF717421F3200973852 /* TbAuftraggeberController.h */,
+				8282FDF817421F3200973852 /* TbAuftraggeberController.m */,
+				8282FDF917421F3200973852 /* TbBaustelleController.h */,
+				8282FDFA17421F3200973852 /* TbBaustelleController.m */,
+				8282FDFB17421F3200973852 /* TbCanvasImageView.h */,
+				8282FDFC17421F3200973852 /* TbCanvasImageView.m */,
+				8282FDFD17421F3200973852 /* TbDatumController.h */,
+				8282FDFE17421F3200973852 /* TbDatumController.m */,
+				8282FDFF17421F3200973852 /* TbLeistung.h */,
+				8282FE0017421F3200973852 /* TbLeistung.m */,
+				8282FE0117421F3200973852 /* TbLeistungBeschreibungController.h */,
+				8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */,
+				8282FE0317421F3200973852 /* TbLeistungController.h */,
+				8282FE0417421F3200973852 /* TbLeistungController.m */,
+				8282FE0517421F3200973852 /* TbLeistungListController.h */,
+				8282FE0617421F3200973852 /* TbLeistungListController.m */,
+				8282FE0717421F3200973852 /* TbLeistungNameController.h */,
+				8282FE0817421F3200973852 /* TbLeistungNameController.m */,
+				8282FE0917421F3200973852 /* TbLeistungStundenController.h */,
+				8282FE0A17421F3200973852 /* TbLeistungStundenController.m */,
+				8282FE0B17421F3200973852 /* TbObjectController.h */,
+				8282FE0C17421F3200973852 /* TbObjectController.m */,
+				8282FE0F17421F3200973852 /* TbObjectListController.h */,
+				8282FE1017421F3200973852 /* TbObjectListController.m */,
+				8282FE1117421F3200973852 /* TbTagesbericht.h */,
+				8282FE1217421F3200973852 /* TbTagesbericht.m */,
+				8282FE1317421F3200973852 /* TbTagesberichtController.h */,
+				8282FE1417421F3200973852 /* TbTagesberichtController.m */,
+				8282FE1517421F3200973852 /* TbTagesberichtListController.h */,
+				8282FE1617421F3200973852 /* TbTagesberichtListController.m */,
+				8282FE1717421F3200973852 /* TbTextController.h */,
+				8282FE1817421F3200973852 /* TbTextController.m */,
+				8282FE1917421F3200973852 /* TbUnterschriftController.h */,
+				8282FE1A17421F3200973852 /* TbUnterschriftController.m */,
 				8282FD4A17421C8100973852 /* Supporting Files */,
 			);
 			path = Tagesbericht;
@@ -144,10 +270,13 @@
 		8282FD4A17421C8100973852 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8282FDF017421F3200973852 /* Tagesbericht-Html.mustache */,
 				8282FD4B17421C8100973852 /* Tagesbericht-Info.plist */,
 				8282FD4C17421C8100973852 /* InfoPlist.strings */,
 				8282FD4F17421C8100973852 /* main.m */,
 				8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */,
+				8282FDE917421F3200973852 /* Icon.png */,
+				8282FDEA17421F3200973852 /* Icon@2x.png */,
 				8282FD5517421C8100973852 /* Default.png */,
 				8282FD5717421C8100973852 /* Default@2x.png */,
 				8282FD5917421C8100973852 /* Default-568h@2x.png */,
@@ -172,6 +301,36 @@
 				8282FD7717421C8100973852 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8282FDE417421F3200973852 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				8282FDE517421F3200973852 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		8282FE3D17422B0000973852 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8282FE3E17422B0000973852 /* GRMustache.h */,
+				8282FE3F17422B0000973852 /* GRMustacheAvailabilityMacros.h */,
+				8282FE4017422B0000973852 /* GRMustacheConfiguration.h */,
+				8282FE4117422B0000973852 /* GRMustacheContext.h */,
+				8282FE4217422B0000973852 /* GRMustacheError.h */,
+				8282FE4317422B0000973852 /* GRMustacheFilter.h */,
+				8282FE4417422B0000973852 /* GRMustacheLocalizer.h */,
+				8282FE4517422B0000973852 /* GRMustacheRendering.h */,
+				8282FE4617422B0000973852 /* GRMustacheTag.h */,
+				8282FE4717422B0000973852 /* GRMustacheTagDelegate.h */,
+				8282FE4817422B0000973852 /* GRMustacheTemplate.h */,
+				8282FE4917422B0000973852 /* GRMustacheTemplateRepository.h */,
+				8282FE4A17422B0000973852 /* GRMustacheVersion.h */,
+				8282FE4B17422B0000973852 /* NSFormatter+GRMustache.h */,
+				8282FE4C17422B0000973852 /* NSValueTransformer+GRMustache.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +409,12 @@
 				8282FD5617421C8100973852 /* Default.png in Resources */,
 				8282FD5817421C8100973852 /* Default@2x.png in Resources */,
 				8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */,
-				8282FD5D17421C8100973852 /* MainStoryboard.storyboard in Resources */,
+				8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */,
+				8282FE1C17421F3200973852 /* MainStoryboard.storyboard in Resources */,
+				8282FE1D17421F3200973852 /* Icon.png in Resources */,
+				8282FE1E17421F3200973852 /* Icon@2x.png in Resources */,
+				8282FE2117421F3200973852 /* Settings.bundle in Resources */,
+				8282FE2217421F3200973852 /* Tagesbericht-Html.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +450,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8282FD5017421C8100973852 /* main.m in Sources */,
-				8282FD5417421C8100973852 /* TbAppDelegate.m in Sources */,
-				8282FD6017421C8100973852 /* Tagesbericht.xcdatamodeld in Sources */,
-				8282FD6317421C8100973852 /* TbMasterViewController.m in Sources */,
-				8282FD6617421C8100973852 /* TbDetailViewController.m in Sources */,
+				8282FE1F17421F3200973852 /* Leistung.m in Sources */,
+				8282FE2017421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m in Sources */,
+				8282FE2317421F3200973852 /* Tagesbericht.m in Sources */,
+				8282FE2417421F3200973852 /* Tagesbericht.xcdatamodeld in Sources */,
+				8282FE2517421F3200973852 /* TbAppDelegate.m in Sources */,
+				8282FE2617421F3200973852 /* TbAuftraggeberController.m in Sources */,
+				8282FE2717421F3200973852 /* TbBaustelleController.m in Sources */,
+				8282FE2817421F3200973852 /* TbCanvasImageView.m in Sources */,
+				8282FE2917421F3200973852 /* TbDatumController.m in Sources */,
+				8282FE2A17421F3200973852 /* TbLeistung.m in Sources */,
+				8282FE2B17421F3200973852 /* TbLeistungBeschreibungController.m in Sources */,
+				8282FE2C17421F3200973852 /* TbLeistungController.m in Sources */,
+				8282FE2D17421F3200973852 /* TbLeistungListController.m in Sources */,
+				8282FE2E17421F3200973852 /* TbLeistungNameController.m in Sources */,
+				8282FE2F17421F3200973852 /* TbLeistungStundenController.m in Sources */,
+				8282FE3017421F3200973852 /* TbObjectController.m in Sources */,
+				8282FE3217421F3200973852 /* TbObjectListController.m in Sources */,
+				8282FE3317421F3200973852 /* TbTagesbericht.m in Sources */,
+				8282FE3417421F3200973852 /* TbTagesberichtController.m in Sources */,
+				8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */,
+				8282FE3617421F3200973852 /* TbTextController.m in Sources */,
+				8282FE3717421F3200973852 /* TbUnterschriftController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,20 +502,29 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8282FD5B17421C8100973852 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8282FD5C17421C8100973852 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 		8282FD7717421C8100973852 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8282FD7817421C8100973852 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8282FDE517421F3200973852 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8282FDE617421F3200973852 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8282FDE717421F3200973852 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8282FDE817421F3200973852 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,6 +592,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../GRMustache/lib\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -412,6 +608,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../GRMustache/lib\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -482,12 +683,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */ = {
+		8282FDF317421F3200973852 /* Tagesbericht.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */,
+				8282FDF417421F3200973852 /* Tagesbericht.xcdatamodel */,
 			);
-			currentVersion = 8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */;
+			currentVersion = 8282FDF417421F3200973852 /* Tagesbericht.xcdatamodel */;
 			path = Tagesbericht.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
