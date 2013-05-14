@@ -37,7 +37,6 @@
 		8282FE2717421F3200973852 /* TbBaustelleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFA17421F3200973852 /* TbBaustelleController.m */; };
 		8282FE2817421F3200973852 /* TbCanvasImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFC17421F3200973852 /* TbCanvasImageView.m */; };
 		8282FE2917421F3200973852 /* TbDatumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDFE17421F3200973852 /* TbDatumController.m */; };
-		8282FE2A17421F3200973852 /* TbLeistung.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0017421F3200973852 /* TbLeistung.m */; };
 		8282FE2B17421F3200973852 /* TbLeistungBeschreibungController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */; };
 		8282FE2C17421F3200973852 /* TbLeistungController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0417421F3200973852 /* TbLeistungController.m */; };
 		8282FE2D17421F3200973852 /* TbLeistungListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0617421F3200973852 /* TbLeistungListController.m */; };
@@ -45,7 +44,6 @@
 		8282FE2F17421F3200973852 /* TbLeistungStundenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0A17421F3200973852 /* TbLeistungStundenController.m */; };
 		8282FE3017421F3200973852 /* TbObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE0C17421F3200973852 /* TbObjectController.m */; };
 		8282FE3217421F3200973852 /* TbObjectListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1017421F3200973852 /* TbObjectListController.m */; };
-		8282FE3317421F3200973852 /* TbTagesbericht.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1217421F3200973852 /* TbTagesbericht.m */; };
 		8282FE3417421F3200973852 /* TbTagesberichtController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1417421F3200973852 /* TbTagesberichtController.m */; };
 		8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1617421F3200973852 /* TbTagesberichtListController.m */; };
 		8282FE3617421F3200973852 /* TbTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1817421F3200973852 /* TbTextController.m */; };
@@ -106,8 +104,6 @@
 		8282FDFC17421F3200973852 /* TbCanvasImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbCanvasImageView.m; sourceTree = "<group>"; };
 		8282FDFD17421F3200973852 /* TbDatumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbDatumController.h; sourceTree = "<group>"; };
 		8282FDFE17421F3200973852 /* TbDatumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbDatumController.m; sourceTree = "<group>"; };
-		8282FDFF17421F3200973852 /* TbLeistung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistung.h; sourceTree = "<group>"; };
-		8282FE0017421F3200973852 /* TbLeistung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistung.m; sourceTree = "<group>"; };
 		8282FE0117421F3200973852 /* TbLeistungBeschreibungController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungBeschreibungController.h; sourceTree = "<group>"; };
 		8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbLeistungBeschreibungController.m; sourceTree = "<group>"; };
 		8282FE0317421F3200973852 /* TbLeistungController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbLeistungController.h; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 		8282FE0C17421F3200973852 /* TbObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbObjectController.m; sourceTree = "<group>"; };
 		8282FE0F17421F3200973852 /* TbObjectListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbObjectListController.h; sourceTree = "<group>"; };
 		8282FE1017421F3200973852 /* TbObjectListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbObjectListController.m; sourceTree = "<group>"; };
-		8282FE1117421F3200973852 /* TbTagesbericht.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesbericht.h; sourceTree = "<group>"; };
-		8282FE1217421F3200973852 /* TbTagesbericht.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTagesbericht.m; sourceTree = "<group>"; };
 		8282FE1317421F3200973852 /* TbTagesberichtController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesberichtController.h; sourceTree = "<group>"; };
 		8282FE1417421F3200973852 /* TbTagesberichtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbTagesberichtController.m; sourceTree = "<group>"; };
 		8282FE1517421F3200973852 /* TbTagesberichtListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbTagesberichtListController.h; sourceTree = "<group>"; };
@@ -182,7 +176,6 @@
 		8282FD3517421C8100973852 = {
 			isa = PBXGroup;
 			children = (
-				8282FE4D17422B2600973852 /* MessageUI.framework */,
 				8282FD4917421C8100973852 /* Tagesbericht */,
 				8282FD7417421C8100973852 /* TagesberichtTests */,
 				8282FD4017421C8100973852 /* Frameworks */,
@@ -203,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */,
+				8282FE4D17422B2600973852 /* MessageUI.framework */,
 				8282FD4117421C8100973852 /* UIKit.framework */,
 				8282FD4317421C8100973852 /* Foundation.framework */,
 				8282FD4517421C8100973852 /* CoreGraphics.framework */,
@@ -236,8 +230,6 @@
 				8282FDFC17421F3200973852 /* TbCanvasImageView.m */,
 				8282FDFD17421F3200973852 /* TbDatumController.h */,
 				8282FDFE17421F3200973852 /* TbDatumController.m */,
-				8282FDFF17421F3200973852 /* TbLeistung.h */,
-				8282FE0017421F3200973852 /* TbLeistung.m */,
 				8282FE0117421F3200973852 /* TbLeistungBeschreibungController.h */,
 				8282FE0217421F3200973852 /* TbLeistungBeschreibungController.m */,
 				8282FE0317421F3200973852 /* TbLeistungController.h */,
@@ -252,8 +244,6 @@
 				8282FE0C17421F3200973852 /* TbObjectController.m */,
 				8282FE0F17421F3200973852 /* TbObjectListController.h */,
 				8282FE1017421F3200973852 /* TbObjectListController.m */,
-				8282FE1117421F3200973852 /* TbTagesbericht.h */,
-				8282FE1217421F3200973852 /* TbTagesbericht.m */,
 				8282FE1317421F3200973852 /* TbTagesberichtController.h */,
 				8282FE1417421F3200973852 /* TbTagesberichtController.m */,
 				8282FE1517421F3200973852 /* TbTagesberichtListController.h */,
@@ -459,7 +449,6 @@
 				8282FE2717421F3200973852 /* TbBaustelleController.m in Sources */,
 				8282FE2817421F3200973852 /* TbCanvasImageView.m in Sources */,
 				8282FE2917421F3200973852 /* TbDatumController.m in Sources */,
-				8282FE2A17421F3200973852 /* TbLeistung.m in Sources */,
 				8282FE2B17421F3200973852 /* TbLeistungBeschreibungController.m in Sources */,
 				8282FE2C17421F3200973852 /* TbLeistungController.m in Sources */,
 				8282FE2D17421F3200973852 /* TbLeistungListController.m in Sources */,
@@ -467,7 +456,6 @@
 				8282FE2F17421F3200973852 /* TbLeistungStundenController.m in Sources */,
 				8282FE3017421F3200973852 /* TbObjectController.m in Sources */,
 				8282FE3217421F3200973852 /* TbObjectListController.m in Sources */,
-				8282FE3317421F3200973852 /* TbTagesbericht.m in Sources */,
 				8282FE3417421F3200973852 /* TbTagesberichtController.m in Sources */,
 				8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */,
 				8282FE3617421F3200973852 /* TbTextController.m in Sources */,
@@ -671,6 +659,7 @@
 				8282FD8117421C8100973852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8282FD8217421C8100973852 /* Build configuration list for PBXNativeTarget "TagesberichtTests" */ = {
 			isa = XCConfigurationList;
@@ -679,6 +668,7 @@
 				8282FD8417421C8100973852 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
