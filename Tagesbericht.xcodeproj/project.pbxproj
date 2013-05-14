@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8282FD4217421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
+		8282FD4417421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
+		8282FD4617421C8100973852 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4517421C8100973852 /* CoreGraphics.framework */; };
+		8282FD4817421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
+		8282FD4E17421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD4C17421C8100973852 /* InfoPlist.strings */; };
+		8282FD5017421C8100973852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD4F17421C8100973852 /* main.m */; };
+		8282FD5417421C8100973852 /* TbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD5317421C8100973852 /* TbAppDelegate.m */; };
+		8282FD5617421C8100973852 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5517421C8100973852 /* Default.png */; };
+		8282FD5817421C8100973852 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5717421C8100973852 /* Default@2x.png */; };
+		8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5917421C8100973852 /* Default-568h@2x.png */; };
+		8282FD5D17421C8100973852 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5B17421C8100973852 /* MainStoryboard.storyboard */; };
+		8282FD6017421C8100973852 /* Tagesbericht.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */; };
+		8282FD6317421C8100973852 /* TbMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD6217421C8100973852 /* TbMasterViewController.m */; };
+		8282FD6617421C8100973852 /* TbDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD6517421C8100973852 /* TbDetailViewController.m */; };
+		8282FD6E17421C8100973852 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD6D17421C8100973852 /* SenTestingKit.framework */; };
+		8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
+		8282FD7017421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
+		8282FD7117421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
+		8282FD7917421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD7717421C8100973852 /* InfoPlist.strings */; };
+		8282FD7C17421C8100973852 /* TagesberichtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD7B17421C8100973852 /* TagesberichtTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8282FD7217421C8100973852 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8282FD3617421C8100973852 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8282FD3D17421C8100973852;
+			remoteInfo = Tagesbericht;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8282FD3E17421C8100973852 /* Tagesbericht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagesbericht.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8282FD4117421C8100973852 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8282FD4317421C8100973852 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8282FD4517421C8100973852 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8282FD4717421C8100973852 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8282FD4B17421C8100973852 /* Tagesbericht-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tagesbericht-Info.plist"; sourceTree = "<group>"; };
+		8282FD4D17421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8282FD4F17421C8100973852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tagesbericht-Prefix.pch"; sourceTree = "<group>"; };
+		8282FD5217421C8100973852 /* TbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbAppDelegate.h; sourceTree = "<group>"; };
+		8282FD5317421C8100973852 /* TbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbAppDelegate.m; sourceTree = "<group>"; };
+		8282FD5517421C8100973852 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8282FD5717421C8100973852 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8282FD5917421C8100973852 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8282FD5C17421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tagesbericht.xcdatamodel; sourceTree = "<group>"; };
+		8282FD6117421C8100973852 /* TbMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbMasterViewController.h; sourceTree = "<group>"; };
+		8282FD6217421C8100973852 /* TbMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbMasterViewController.m; sourceTree = "<group>"; };
+		8282FD6417421C8100973852 /* TbDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TbDetailViewController.h; sourceTree = "<group>"; };
+		8282FD6517421C8100973852 /* TbDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TbDetailViewController.m; sourceTree = "<group>"; };
+		8282FD6C17421C8100973852 /* TagesberichtTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagesberichtTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8282FD6D17421C8100973852 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8282FD7617421C8100973852 /* TagesberichtTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TagesberichtTests-Info.plist"; sourceTree = "<group>"; };
+		8282FD7817421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8282FD7A17421C8100973852 /* TagesberichtTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagesberichtTests.h; sourceTree = "<group>"; };
+		8282FD7B17421C8100973852 /* TagesberichtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagesberichtTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8282FD3B17421C8100973852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD4217421C8100973852 /* UIKit.framework in Frameworks */,
+				8282FD4417421C8100973852 /* Foundation.framework in Frameworks */,
+				8282FD4617421C8100973852 /* CoreGraphics.framework in Frameworks */,
+				8282FD4817421C8100973852 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282FD6817421C8100973852 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD6E17421C8100973852 /* SenTestingKit.framework in Frameworks */,
+				8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */,
+				8282FD7017421C8100973852 /* Foundation.framework in Frameworks */,
+				8282FD7117421C8100973852 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8282FD3517421C8100973852 = {
+			isa = PBXGroup;
+			children = (
+				8282FD4917421C8100973852 /* Tagesbericht */,
+				8282FD7417421C8100973852 /* TagesberichtTests */,
+				8282FD4017421C8100973852 /* Frameworks */,
+				8282FD3F17421C8100973852 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8282FD3F17421C8100973852 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD3E17421C8100973852 /* Tagesbericht.app */,
+				8282FD6C17421C8100973852 /* TagesberichtTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8282FD4017421C8100973852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD4117421C8100973852 /* UIKit.framework */,
+				8282FD4317421C8100973852 /* Foundation.framework */,
+				8282FD4517421C8100973852 /* CoreGraphics.framework */,
+				8282FD4717421C8100973852 /* CoreData.framework */,
+				8282FD6D17421C8100973852 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8282FD4917421C8100973852 /* Tagesbericht */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD5217421C8100973852 /* TbAppDelegate.h */,
+				8282FD5317421C8100973852 /* TbAppDelegate.m */,
+				8282FD5B17421C8100973852 /* MainStoryboard.storyboard */,
+				8282FD6117421C8100973852 /* TbMasterViewController.h */,
+				8282FD6217421C8100973852 /* TbMasterViewController.m */,
+				8282FD6417421C8100973852 /* TbDetailViewController.h */,
+				8282FD6517421C8100973852 /* TbDetailViewController.m */,
+				8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */,
+				8282FD4A17421C8100973852 /* Supporting Files */,
+			);
+			path = Tagesbericht;
+			sourceTree = "<group>";
+		};
+		8282FD4A17421C8100973852 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD4B17421C8100973852 /* Tagesbericht-Info.plist */,
+				8282FD4C17421C8100973852 /* InfoPlist.strings */,
+				8282FD4F17421C8100973852 /* main.m */,
+				8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */,
+				8282FD5517421C8100973852 /* Default.png */,
+				8282FD5717421C8100973852 /* Default@2x.png */,
+				8282FD5917421C8100973852 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8282FD7417421C8100973852 /* TagesberichtTests */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD7A17421C8100973852 /* TagesberichtTests.h */,
+				8282FD7B17421C8100973852 /* TagesberichtTests.m */,
+				8282FD7517421C8100973852 /* Supporting Files */,
+			);
+			path = TagesberichtTests;
+			sourceTree = "<group>";
+		};
+		8282FD7517421C8100973852 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8282FD7617421C8100973852 /* TagesberichtTests-Info.plist */,
+				8282FD7717421C8100973852 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8282FD3D17421C8100973852 /* Tagesbericht */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8282FD7F17421C8100973852 /* Build configuration list for PBXNativeTarget "Tagesbericht" */;
+			buildPhases = (
+				8282FD3A17421C8100973852 /* Sources */,
+				8282FD3B17421C8100973852 /* Frameworks */,
+				8282FD3C17421C8100973852 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tagesbericht;
+			productName = Tagesbericht;
+			productReference = 8282FD3E17421C8100973852 /* Tagesbericht.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8282FD6B17421C8100973852 /* TagesberichtTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8282FD8217421C8100973852 /* Build configuration list for PBXNativeTarget "TagesberichtTests" */;
+			buildPhases = (
+				8282FD6717421C8100973852 /* Sources */,
+				8282FD6817421C8100973852 /* Frameworks */,
+				8282FD6917421C8100973852 /* Resources */,
+				8282FD6A17421C8100973852 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8282FD7317421C8100973852 /* PBXTargetDependency */,
+			);
+			name = TagesberichtTests;
+			productName = TagesberichtTests;
+			productReference = 8282FD6C17421C8100973852 /* TagesberichtTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8282FD3617421C8100973852 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Tb;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Matthias Burbach";
+			};
+			buildConfigurationList = 8282FD3917421C8100973852 /* Build configuration list for PBXProject "Tagesbericht" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8282FD3517421C8100973852;
+			productRefGroup = 8282FD3F17421C8100973852 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8282FD3D17421C8100973852 /* Tagesbericht */,
+				8282FD6B17421C8100973852 /* TagesberichtTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8282FD3C17421C8100973852 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD4E17421C8100973852 /* InfoPlist.strings in Resources */,
+				8282FD5617421C8100973852 /* Default.png in Resources */,
+				8282FD5817421C8100973852 /* Default@2x.png in Resources */,
+				8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */,
+				8282FD5D17421C8100973852 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282FD6917421C8100973852 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD7917421C8100973852 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8282FD6A17421C8100973852 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8282FD3A17421C8100973852 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD5017421C8100973852 /* main.m in Sources */,
+				8282FD5417421C8100973852 /* TbAppDelegate.m in Sources */,
+				8282FD6017421C8100973852 /* Tagesbericht.xcdatamodeld in Sources */,
+				8282FD6317421C8100973852 /* TbMasterViewController.m in Sources */,
+				8282FD6617421C8100973852 /* TbDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8282FD6717421C8100973852 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8282FD7C17421C8100973852 /* TagesberichtTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8282FD7317421C8100973852 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8282FD3D17421C8100973852 /* Tagesbericht */;
+			targetProxy = 8282FD7217421C8100973852 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8282FD4C17421C8100973852 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8282FD4D17421C8100973852 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8282FD5B17421C8100973852 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8282FD5C17421C8100973852 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		8282FD7717421C8100973852 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8282FD7817421C8100973852 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8282FD7D17421C8100973852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8282FD7E17421C8100973852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8282FD8017421C8100973852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8282FD8117421C8100973852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8282FD8317421C8100973852 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tagesbericht.app/Tagesbericht";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				INFOPLIST_FILE = "TagesberichtTests/TagesberichtTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8282FD8417421C8100973852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tagesbericht.app/Tagesbericht";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				INFOPLIST_FILE = "TagesberichtTests/TagesberichtTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8282FD3917421C8100973852 /* Build configuration list for PBXProject "Tagesbericht" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8282FD7D17421C8100973852 /* Debug */,
+				8282FD7E17421C8100973852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8282FD7F17421C8100973852 /* Build configuration list for PBXNativeTarget "Tagesbericht" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8282FD8017421C8100973852 /* Debug */,
+				8282FD8117421C8100973852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8282FD8217421C8100973852 /* Build configuration list for PBXNativeTarget "TagesberichtTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8282FD8317421C8100973852 /* Debug */,
+				8282FD8417421C8100973852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8282FD5E17421C8100973852 /* Tagesbericht.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */,
+			);
+			currentVersion = 8282FD5F17421C8100973852 /* Tagesbericht.xcdatamodel */;
+			path = Tagesbericht.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8282FD3617421C8100973852 /* Project object */;
+}
