@@ -35,8 +35,9 @@
 - (void)saveData
 {
     int minuten = self.stundenDatePicker.countDownDuration / 60;
-    if (minuten == 1) {
-        minuten = 0;
+    int minutenOhneStunden = minuten % 60;
+    if (minutenOhneStunden == 1) {
+        minuten = minuten - 1;
     }
     self.leistung.minuten = [NSNumber numberWithInt:minuten];
 }

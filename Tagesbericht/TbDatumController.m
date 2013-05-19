@@ -28,10 +28,8 @@
 
 - (void)loadData
 {
-    if (self.tagesbericht) {
-        if (self.tagesbericht.datum) {
-            self.datumDatePicker.date = self.tagesbericht.datum;
-        }
+    if (self.tagesbericht.datum) {
+        self.datumDatePicker.date = self.tagesbericht.datum;
     }
 }
 

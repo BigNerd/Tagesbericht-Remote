@@ -37,7 +37,7 @@
         if (!beschreibung) {
             beschreibung = @"";
         }
-        result = [NSString stringWithFormat:@"[%d:%d] %@ [%@]",
+        result = [NSString stringWithFormat:@"[%02d:%02d] %@ [%@]",
                   self.stunden, self.minutenOhneVolleStunden,beschreibung, name];
     }
     return result;

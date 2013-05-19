@@ -40,7 +40,7 @@
     }
     if (self.leistung.minuten) {
         NSString* stundenUndMinuten =
-            [NSString stringWithFormat:@"%d:%d",
+            [NSString stringWithFormat:@"%02d:%02d",
                 self.leistung.stunden, self.leistung.minutenOhneVolleStunden];
         self.stundenCell.detailTextLabel.text = stundenUndMinuten;
     }
