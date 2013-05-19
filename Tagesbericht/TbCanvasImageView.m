@@ -8,14 +8,17 @@
 
 #import "TbCanvasImageView.h"
 
+@interface TbCanvasImageView ()
+
+@property CGPoint location;
+
+@end
+
 @implementation TbCanvasImageView
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
     return self;
 }
 

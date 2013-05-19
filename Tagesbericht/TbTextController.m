@@ -10,10 +10,7 @@
 
 @interface TbTextController ()
 
-//private
 @property (strong, nonatomic) NSMutableArray *filteredAutoSuggestions;
-
-//private
 @property (strong, nonatomic) UITableView *autoSuggestTableView;
 
 @end
@@ -107,6 +104,7 @@
 }
 
 #pragma mark - the text field delegate methods
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.autoSuggestTableView.hidden = NO;

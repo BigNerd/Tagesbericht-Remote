@@ -9,7 +9,6 @@
 #import "Leistung.h"
 #import "Tagesbericht.h"
 
-
 @implementation Leistung
 
 @dynamic name;
@@ -38,7 +37,7 @@
             beschreibung = @"";
         }
         result = [NSString stringWithFormat:@"[%02d:%02d] %@ [%@]",
-                  self.stunden, self.minutenOhneVolleStunden,beschreibung, name];
+                  self.stunden, self.minutenOhneVolleStunden, beschreibung, name];
     }
     return result;
 }

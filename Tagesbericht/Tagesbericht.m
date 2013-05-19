@@ -9,7 +9,6 @@
 #import "Tagesbericht.h"
 #import "Leistung.h"
 
-
 @implementation Tagesbericht
 
 @dynamic auftraggeber;
@@ -65,16 +64,6 @@
         summeMinuten = summeMinuten + [leistung.minuten intValue];
     }
     return summeMinuten;
-}
-
-- (NSDateComponents*) datumAsDateComponents
-{
-    NSDateComponents *components =
-    [[NSCalendar currentCalendar]
-     components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit
-     fromDate: self.datum];
-    
-    return components;
 }
 
 @end

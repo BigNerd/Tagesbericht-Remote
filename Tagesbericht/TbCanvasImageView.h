@@ -12,6 +12,4 @@
 
 - (void) clear;
 
-@property CGPoint location;
-
 @end
