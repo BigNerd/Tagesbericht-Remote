@@ -1,6 +1,6 @@
 // The MIT License
 //
-// Copyright (c) 2013 Gwendal Roué
+// Copyright (c) 2014 Gwendal Roué
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@
  * GRMustacheLocalizer can localize the content of a Mustache section.
  * It also has a filter facet that localizes your data.
  *
+ * **Companion guide:** https://github.com/groue/GRMustache/blob/master/Guides/standard_library.md#localize
+ *
  * The GRMustache standard library has a `localize` key which returns a
  * GRMustacheLocalizer that localizes just like the NSLocalizableString macro
  * does: with the Localizable.strings table of the main bundle.
@@ -36,7 +38,7 @@
  * ### Localizing data:
  *
  * `{{ localize(greeting) }}` renders `NSLocalizedString(@"Hello", nil)`,
- * assuming the `greeting` key resolves to the @"Hello" string.
+ * assuming the `greeting` key resolves to the `Hello` string.
  *
  * ### Localizing sections:
  *
@@ -45,13 +47,13 @@
  * ### Localizing sections with arguments:
  *
  * `{{#localize}}Hello {{name}}{{/localize}}` builds the format string
- * @"Hello %@", localizes it with NSLocalizedString, and finally
+ * `Hello %@`, localizes it with NSLocalizedString, and finally
  * injects the name with `[NSString stringWithFormat:]`.
  *
  * ### Localize sections with arguments and conditions:
  *
  * `{{#localize}}Good morning {{#title}}{{title}}{{/title}} {{name}}{{/localize}}`
- * build the format string @"Good morning %@" or @"Good morning %@ %@",
+ * build the format string `Good morning %@" or @"Good morning %@ %@`,
  * depending on the presence of the `title` key. It then injects the name, or
  * both title and name, with `[NSString stringWithFormat:]`, to build the final
  * rendering.
@@ -61,8 +63,6 @@
  * You can build your own localizing helper with the initWithBundle:tableName:
  * method. The helper would then localize using the specified table from the
  * specified bundle.
- *
- * **Companion guide:** https://github.com/groue/GRMustache/blob/master/Guides/standard_library.md#localize
  *
  * @since v6.4
  */
@@ -85,14 +85,14 @@
  *
  * @since v6.4
  */
-- (id)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName AVAILABLE_GRMUSTACHE_VERSION_6_4_AND_LATER;
+- (instancetype)initWithBundle:(NSBundle *)bundle tableName:(NSString *)tableName AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * The bundle where to look for localized strings.
  *
  * @since v6.4
  */
-@property (nonatomic, retain, readonly) NSBundle *bundle AVAILABLE_GRMUSTACHE_VERSION_6_4_AND_LATER;
+@property (nonatomic, retain, readonly) NSBundle *bundle AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * The table where to look for localized strings.
@@ -101,7 +101,7 @@
  *
  * @since v6.4
  */
-@property (nonatomic, retain, readonly) NSString *tableName AVAILABLE_GRMUSTACHE_VERSION_6_4_AND_LATER;
+@property (nonatomic, retain, readonly) NSString *tableName AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 @end
 

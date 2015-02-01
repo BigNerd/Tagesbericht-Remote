@@ -1,6 +1,6 @@
 // The MIT License
 // 
-// Copyright (c) 2013 Gwendal Roué
+// Copyright (c) 2014 Gwendal Roué
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,9 +22,11 @@
 
 #import <Foundation/Foundation.h>
 #import "GRMustacheAvailabilityMacros.h"
-#import "GRMustacheConfiguration.h"
+#import "GRMustacheRendering.h"
 
 @class GRMustacheContext;
+@class GRMustacheTemplateRepository;
+@protocol GRMustacheTagDelegate;
 
 /**
  * The GRMustacheTemplate class provides with Mustache template rendering
@@ -34,11 +36,11 @@
  * 
  * @since v1.0
  */
-@interface GRMustacheTemplate: NSObject {
+@interface GRMustacheTemplate: NSObject<GRMustacheRendering> {
 @private
-    NSArray *_components;
+    GRMustacheTemplateRepository *_templateRepository;
+    id _templateAST;
     GRMustacheContext *_baseContext;
-    GRMustacheContentType _contentType;
 }
 
 
@@ -58,7 +60,7 @@
  *
  * @since v1.11
  */
-+ (instancetype)templateFromString:(NSString *)templateString error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (instancetype)templateFromString:(NSString *)templateString error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * Parses a template file, and returns a compiled template.
@@ -77,7 +79,7 @@
  *
  * @since v1.11
  */
-+ (instancetype)templateFromContentsOfFile:(NSString *)path error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (instancetype)templateFromContentsOfFile:(NSString *)path error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * Parses a template file, and returns a compiled template.
@@ -96,7 +98,7 @@
  *
  * @since v1.11
  */
-+ (instancetype)templateFromContentsOfURL:(NSURL *)url error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (instancetype)templateFromContentsOfURL:(NSURL *)url error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * Parses a bundle resource template, and returns a compiled template.
@@ -120,7 +122,7 @@
  *
  * @since v1.11
  */
-+ (instancetype)templateFromResource:(NSString *)name bundle:(NSBundle *)bundle error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (instancetype)templateFromResource:(NSString *)name bundle:(NSBundle *)bundle error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -137,10 +139,110 @@
  * @see GRMustacheConfiguration
  * @see GRMustacheTemplateRepository
  * @see [GRMustache standardLibrary]
+ * @see extendBaseContextWithObject:
+ * @see extendBaseContextWithProtectedObject:
+ * @see extendBaseContextWithTagDelegate:
  *
  * @since v6.0
  */
-@property (nonatomic, retain) GRMustacheContext *baseContext AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
+@property (nonatomic, retain) GRMustacheContext *baseContext AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
+
+/**
+ * Extends the base context of the receiver with the provided object, making its
+ * keys available for all renderings.
+ *
+ * For example:
+ *
+ * ```
+ * GRMustacheTemplate *template = [GRMustacheTemplate templateFromString:@"{{name}}" error:NULL];
+ *
+ * // Have the `name` key defined for all renderings of the template:
+ * id object = @{ @"name": @"Arthur" };
+ * [template extendBaseContextWithObject:object];
+ *
+ * // Renders "Arthur"
+ * ```
+ * [template renderObject:nil error:NULL];
+ *
+ * Keys defined by _object_ can be overriden by other objects that will
+ * eventually enter the context stack:
+ *
+ * ```
+ * // Renders "Billy", not "Arthur"
+ * [template renderObject:@{ @"name": @"Billy" } error:NULL];
+ * ```
+ *
+ * This method is a shortcut. It is equivalent to the following line of code:
+ *
+ * ```
+ * template.baseContext = [template.baseContext contextByAddingObject:object];
+ * ```
+ *
+ * @param object  An object
+ *
+ * @see baseContext
+ * @see extendBaseContextWithProtectedObject:
+ * @see extendBaseContextWithTagDelegate:
+ *
+ * @since v6.8
+ */
+- (void)extendBaseContextWithObject:(id)object AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
+
+/**
+ * Extends the base context of the receiver with the provided object, making its
+ * keys available for all renderings. 
+ *
+ * Keys defined by _object_ are given priority, which means that they can not be
+ * overriden by other objects that will eventually enter the context stack.
+ *
+ * For example:
+ *
+ * ```
+ * GRMustacheTemplate *template = [GRMustacheTemplate templateFromString:@"{{precious}}" error:NULL];
+ *
+ * // The `precious` key is given priority:
+ * id object = @{ @"precious": @"gold" };
+ * [template extendBaseContextWithProtectedObject:object];
+ *
+ * // Renders "gold", not "lead".
+ * [template renderObject:@{ @"precious": @"lead" } error:NULL];
+ * ```
+ *
+ * This method is a shortcut. It is equivalent to the following line of code:
+ *
+ * ```
+ * template.baseContext = [template.baseContext contextByAddingProtectedObject:object];
+ * ```
+ *
+ * @param object  An object
+ *
+ * @see baseContext
+ * @see extendBaseContextWithObject:
+ * @see extendBaseContextWithTagDelegate:
+ *
+ * @since v6.8
+ */
+- (void)extendBaseContextWithProtectedObject:(id)object AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
+
+/**
+ * Extends the base context of the receiver with a tag delegate, making it aware
+ * of the rendering of all tags in the template.
+ *
+ * This method is a shortcut. It is equivalent to the following line of code:
+ *
+ * ```
+ * template.baseContext = [template.baseContext contextByAddingTagDelegate:tagDelegate];
+ * ```
+ *
+ * @param tagDelegate  A tag delegate
+ *
+ * @see baseContext
+ * @see extendBaseContextWithObject:
+ * @see extendBaseContextWithProtectedObject:
+ *
+ * @since v6.8
+ */
+- (void)extendBaseContextWithTagDelegate:(id<GRMustacheTagDelegate>)tagDelegate AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -160,7 +262,7 @@
  *
  * @since v1.0
  */
-+ (NSString *)renderObject:(id)object fromString:(NSString *)templateString error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (NSString *)renderObject:(id)object fromString:(NSString *)templateString error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * Renders an object from a bundle resource template.
@@ -184,10 +286,11 @@
  *
  * @since v1.0
  */
-+ (NSString *)renderObject:(id)object fromResource:(NSString *)name bundle:(NSBundle *)bundle error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
++ (NSString *)renderObject:(id)object fromResource:(NSString *)name bundle:(NSBundle *)bundle error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
- * Renders a template with a context stack initialized with a single object.
+ * Renders a template with a context stack initialized with the provided object
+ * on top of the base context.
  *
  * @param object  An object used for interpreting Mustache tags.
  * @param error   If there is an error rendering the template and its
@@ -198,10 +301,11 @@
  *
  * @since v6.0
  */
-- (NSString *)renderObject:(id)object error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
+- (NSString *)renderObject:(id)object error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
- * Renders a template with a context stack initialized with an array of objects.
+ * Renders a template with a context stack initialized with the provided objects
+ * on top of the base context.
  *
  * @param objects  An array of context objects for interpreting Mustache tags.
  * @param error    If there is an error rendering the template and its
@@ -212,7 +316,7 @@
  *
  * @since v6.0
  */
-- (NSString *)renderObjectsFromArray:(NSArray *)objects error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
+- (NSString *)renderObjectsFromArray:(NSArray *)objects error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 /**
  * Returns the rendering of the receiver, given a rendering context.
@@ -232,6 +336,48 @@
  *
  * @since v6.0
  */
-- (NSString *)renderContentWithContext:(GRMustacheContext *)context HTMLSafe:(BOOL *)HTMLSafe error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_6_0_AND_LATER;
+- (NSString *)renderContentWithContext:(GRMustacheContext *)context HTMLSafe:(BOOL *)HTMLSafe error:(NSError **)error AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
+
+////////////////////////////////////////////////////////////////////////////////
+/// @name Accessing Sibling Templates
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Returns the template repository that issued the receiver.
+ *
+ * All templates belong a template repository:
+ *
+ * - Templates returned by `+[GRMustacheTemplate templateFromString:error:]`
+ *   have a template repository that loads templates and partials stored as
+ *   resources in the main bundle, with extension ".mustache", encoded in UTF8.
+ *
+ * - Templates returned by `+[GRMustacheTemplate templateFromContentsOfFile:error:]`
+ *   have a template repository that loads templates and partials stored in the
+ *   directory of the receiver, with the same file extension ".mustache",
+ *   encoded in UTF8.
+ *
+ * - Templates returned by `+[GRMustacheTemplate templateFromContentsOfURL:error:]`
+ *   have a template repository that loads templates and partials stored in the
+ *   directory of the receiver, with the same file extension ".mustache",
+ *   encoded in UTF8.
+ *
+ * - Templates returned by `+[GRMustacheTemplate templateFromResource:bundle:error:]`
+ *   have a template repository that loads templates and partials stored as
+ *   resources in the specified bundle, with extension ".mustache", encoded in
+ *   UTF8.
+ *
+ * - Templates returned by `-[GRMustacheTemplateRepository templateNamed:error:]`
+ *   and `-[GRMustacheTemplateRepository templateFromString:error:]` belong to
+ *   the invoked repository.
+ *
+ * @see GRMustacheTemplateRepository
+ * @see templateFromString:error:
+ * @see templateFromContentsOfFile:error:
+ * @see templateFromContentsOfURL:error:
+ * @see templateFromResource:bundle:error:
+ *
+ * @since v7.0
+ */
+@property (nonatomic, retain, readonly) GRMustacheTemplateRepository *templateRepository AVAILABLE_GRMUSTACHE_VERSION_7_0_AND_LATER;
 
 @end
