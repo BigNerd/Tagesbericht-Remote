@@ -19,6 +19,12 @@
     [self loadData];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self loadData]; //repeat this call once more to really refresh uitableviewcell labels...
+    [super viewDidAppear:animated];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self saveData];

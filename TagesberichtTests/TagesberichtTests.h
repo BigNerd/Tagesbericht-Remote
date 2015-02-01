@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Matthias Burbach. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface TagesberichtTests : SenTestCase
+@interface TagesberichtTests : XCTestCase
 
 @end

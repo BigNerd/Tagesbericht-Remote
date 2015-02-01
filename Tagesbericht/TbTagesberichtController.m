@@ -38,7 +38,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"TagesberichtController:viewWillAppear...");
     [super viewWillAppear:animated];
+    
     self.duplicateButtonItem = [[UIBarButtonItem alloc]
                       initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                       target:self action:@selector(copyTagesbericht:)];
@@ -110,20 +112,34 @@
 
 - (void)loadData
 {
+    NSLog(@"TagesberichtController:loadData");
+    NSLog(@"auftraggeber:%@", self.tagesbericht.auftraggeber);
+    
     self.auftraggeberCell.detailTextLabel.text = self.tagesbericht.auftraggeber;
+    [self.auftraggeberCell setNeedsLayout];
+    
     self.baustelleCell.detailTextLabel.text = self.tagesbericht.baustelle;
+    [self.baustelleCell setNeedsLayout];
+    
     if (self.tagesbericht.datum) {
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         [dateFormat setDateFormat:@"dd.MM.YYYY"];
         NSString *datumString = [dateFormat stringFromDate:self.tagesbericht.datum];
         self.datumCell.detailTextLabel.text = datumString;
+        [self.datumCell setNeedsLayout];
     }
     self.leistungenCell.detailTextLabel.text =
-        [NSString stringWithFormat:@"(%d)", self.tagesbericht.leistungen.count];
+        [NSString stringWithFormat:@"(%lu)", (unsigned long)self.tagesbericht.leistungen.count];
+    [self.leistungenCell setNeedsLayout];
+    
     self.maschinenCell.detailTextLabel.text =
-        [NSString stringWithFormat:@"(%d)", self.tagesbericht.maschinen.count];
+        [NSString stringWithFormat:@"(%lu)", (unsigned long)self.tagesbericht.maschinen.count];
+    [self.maschinenCell setNeedsLayout];
+    
     self.materialCell.detailTextLabel.text =
-        [NSString stringWithFormat:@"(%d)", self.tagesbericht.material.count];
+        [NSString stringWithFormat:@"(%lu)", (unsigned long)self.tagesbericht.material.count];
+    [self.materialCell setNeedsLayout];
+    
     self.notizenTextView.text = self.tagesbericht.notizen;
 }
 

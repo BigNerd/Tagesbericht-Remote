@@ -19,7 +19,6 @@
 		8282FD5617421C8100973852 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5517421C8100973852 /* Default.png */; };
 		8282FD5817421C8100973852 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5717421C8100973852 /* Default@2x.png */; };
 		8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5917421C8100973852 /* Default-568h@2x.png */; };
-		8282FD6E17421C8100973852 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD6D17421C8100973852 /* SenTestingKit.framework */; };
 		8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
 		8282FD7017421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
 		8282FD7117421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
@@ -50,8 +49,8 @@
 		8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1617421F3200973852 /* TbTagesberichtListController.m */; };
 		8282FE3617421F3200973852 /* TbTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1817421F3200973852 /* TbTextController.m */; };
 		8282FE3717421F3200973852 /* TbUnterschriftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1A17421F3200973852 /* TbUnterschriftController.m */; };
-		8282FE3C1742238F00973852 /* libGRMustache6-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */; };
 		8282FE4E17422B2600973852 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FE4D17422B2600973852 /* MessageUI.framework */; };
+		82E02EFD1A7E78C000378394 /* libGRMustache7-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E02EFC1A7E78C000378394 /* libGRMustache7-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,6 @@
 		8282FD5717421C8100973852 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8282FD5917421C8100973852 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8282FD6C17421C8100973852 /* TagesberichtTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagesberichtTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8282FD6D17421C8100973852 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8282FD7617421C8100973852 /* TagesberichtTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TagesberichtTests-Info.plist"; sourceTree = "<group>"; };
 		8282FD7817421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8282FD7A17421C8100973852 /* TagesberichtTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagesberichtTests.h; sourceTree = "<group>"; };
@@ -148,6 +146,7 @@
 		8282FE4B17422B0000973852 /* NSFormatter+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFormatter+GRMustache.h"; sourceTree = "<group>"; };
 		8282FE4C17422B0000973852 /* NSValueTransformer+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GRMustache.h"; sourceTree = "<group>"; };
 		8282FE4D17422B2600973852 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		82E02EFC1A7E78C000378394 /* libGRMustache7-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libGRMustache7-iOS.a"; path = "Tagesbericht/include/libGRMustache7-iOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E02EFD1A7E78C000378394 /* libGRMustache7-iOS.a in Frameworks */,
 				8282FE4E17422B2600973852 /* MessageUI.framework in Frameworks */,
-				8282FE3C1742238F00973852 /* libGRMustache6-iOS.a in Frameworks */,
 				8282FD4217421C8100973852 /* UIKit.framework in Frameworks */,
 				8282FD4417421C8100973852 /* Foundation.framework in Frameworks */,
 				8282FD4617421C8100973852 /* CoreGraphics.framework in Frameworks */,
@@ -168,7 +167,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8282FD6E17421C8100973852 /* SenTestingKit.framework in Frameworks */,
 				8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */,
 				8282FD7017421C8100973852 /* Foundation.framework in Frameworks */,
 				8282FD7117421C8100973852 /* CoreData.framework in Frameworks */,
@@ -209,13 +207,13 @@
 		8282FD4017421C8100973852 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82E02EFC1A7E78C000378394 /* libGRMustache7-iOS.a */,
 				8282FE3B1742238F00973852 /* libGRMustache6-iOS.a */,
 				8282FE4D17422B2600973852 /* MessageUI.framework */,
 				8282FD4117421C8100973852 /* UIKit.framework */,
 				8282FD4317421C8100973852 /* Foundation.framework */,
 				8282FD4517421C8100973852 /* CoreGraphics.framework */,
 				8282FD4717421C8100973852 /* CoreData.framework */,
-				8282FD6D17421C8100973852 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,7 +374,7 @@
 			name = TagesberichtTests;
 			productName = TagesberichtTests;
 			productReference = 8282FD6C17421C8100973852 /* TagesberichtTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -385,8 +383,14 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Tb;
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Matthias Burbach";
+				TargetAttributes = {
+					8282FD3D17421C8100973852 = {
+						DevelopmentTeam = D9BUA6W32F;
+					};
+				};
 			};
 			buildConfigurationList = 8282FD3917421C8100973852 /* Build configuration list for PBXProject "Tagesbericht" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -589,6 +593,8 @@
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -604,9 +610,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
+					"$(PROJECT_DIR)/Tagesbericht/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -618,6 +626,8 @@
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -633,9 +643,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
+					"$(PROJECT_DIR)/Tagesbericht/include",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -648,13 +660,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				INFOPLIST_FILE = "TagesberichtTests/TagesberichtTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -665,13 +677,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
 				INFOPLIST_FILE = "TagesberichtTests/TagesberichtTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

@@ -37,15 +37,18 @@
 {
     if (self.leistung.name) {
         self.nameCell.detailTextLabel.text = self.leistung.name;
+        [self.nameCell setNeedsLayout];
     }
     if (self.leistung.minuten) {
         NSString* stundenUndMinuten =
             [NSString stringWithFormat:@"%02d:%02d",
                 self.leistung.stunden, self.leistung.minutenOhneVolleStunden];
         self.stundenCell.detailTextLabel.text = stundenUndMinuten;
+        [self.stundenCell setNeedsLayout];
     }
     if (self.leistung.beschreibung) {
         self.beschreibungCell.detailTextLabel.text = self.leistung.beschreibung;
+        [self.beschreibungCell setNeedsLayout];
     }
 }
 
