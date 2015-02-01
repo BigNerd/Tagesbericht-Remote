@@ -13,13 +13,13 @@
 
 @interface Leistung : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * minuten;
-@property (nonatomic, retain) NSString * beschreibung;
-@property (nonatomic, retain) NSNumber * art;
-@property (nonatomic, retain) Tagesbericht *leistungenTagesbericht;
-@property (nonatomic, retain) Tagesbericht *maschinenTagesbericht;
-@property (nonatomic, retain) Tagesbericht *materialTagesbericht;
+@property (strong, nonatomic) NSString * name;
+@property (strong, nonatomic) NSNumber * minuten;
+@property (strong, nonatomic) NSString * beschreibung;
+@property (strong, nonatomic) NSNumber * art;
+@property (strong, nonatomic) Tagesbericht *leistungenTagesbericht;
+@property (strong, nonatomic) Tagesbericht *maschinenTagesbericht;
+@property (strong, nonatomic) Tagesbericht *materialTagesbericht;
 
 enum Leistungsart {Lst_Leistung = 0, Lst_Maschine = 1, Lst_Material = 2};
 

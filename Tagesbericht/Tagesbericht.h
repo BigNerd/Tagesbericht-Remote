@@ -13,24 +13,23 @@
 
 @interface Tagesbericht : NSManagedObject
 
-@property (nonatomic, retain) NSString * auftraggeber;
-@property (nonatomic, retain) NSString * baustelle;
-@property (nonatomic, retain) NSDate * datum;
-@property (nonatomic, retain) NSDate * zuletztGeaendert;
-@property (nonatomic, retain) NSDate * zuletztGesendet;
-@property (nonatomic, retain) NSString * notizen;
-@property (nonatomic, retain) NSData * unterschrift;
-@property (nonatomic, retain) NSOrderedSet *leistungen;
-@property (nonatomic, retain) NSOrderedSet *maschinen;
-@property (nonatomic, retain) NSOrderedSet *material;
+@property (strong, nonatomic) NSString * auftraggeber;
+@property (strong, nonatomic) NSString * baustelle;
+@property (strong, nonatomic) NSDate * datum;
+@property (strong, nonatomic) NSDate * zuletztGeaendert;
+@property (strong, nonatomic) NSDate * zuletztGesendet;
+@property (strong, nonatomic) NSString * notizen;
+@property (strong, nonatomic) NSData * unterschrift;
+@property (strong, nonatomic) NSOrderedSet *leistungen;
+@property (strong, nonatomic) NSOrderedSet *maschinen;
+@property (strong, nonatomic) NSOrderedSet *material;
 
-/*
 - (int)leistungsstunden;
 - (int)leistungsminuten;
 
 - (int)maschinenstunden;
 - (int)maschinenminuten;
-*/
+
 @end
 
 @interface Tagesbericht (CoreDataGeneratedAccessors)
@@ -67,4 +66,5 @@
 - (void)removeMaterialObject:(Leistung *)value;
 - (void)addMaterial:(NSOrderedSet *)values;
 - (void)removeMaterial:(NSOrderedSet *)values;
+
 @end

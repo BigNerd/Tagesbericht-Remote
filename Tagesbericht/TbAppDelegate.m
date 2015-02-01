@@ -9,6 +9,16 @@
 #import "TbAppDelegate.h"
 #import "NSManagedObjectModel+KCOrderedAccessorFix.h"
 
+@interface TbAppDelegate ()
+
+@property (strong, nonatomic) NSPersistentStoreCoordinator *dataStore;
+@property (strong, nonatomic) NSManagedObjectModel *dataModel;
+@property (strong, nonatomic) NSManagedObjectContext *dataContext;
+
+- (NSPersistentStoreCoordinator*)dataStoreForModel:(NSManagedObjectModel*)model filename:(NSString*)filename;
+
+@end
+
 @implementation TbAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -117,8 +127,8 @@
     
     NSError *error;
     NSArray *array = [self.dataContext executeFetchRequest:request error:&error];
-    if (array == nil) {
-        NSLog(@"Error loading Tagesberichte.");
+    if (!array) {
+        NSLog(@"Error loading Tagesberichte:%@", error);
     } else {
         NSLog(@"Loaded Tagesberichte.");
         self.tagesberichte = [NSMutableArray arrayWithArray:array];
@@ -129,7 +139,7 @@
 {
     NSError *error;
     if (![self.dataContext save:&error]) {
-        NSLog(@"Error saving Tagesberichte.");
+        NSLog(@"Error saving Tagesberichte:%@", error);
     } else {
         NSLog(@"Saved Tagesberichte.");
     }

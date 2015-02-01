@@ -21,6 +21,7 @@
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.leftItemsSupplementBackButton = YES;
     
+    //self.editButtonItem.
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:self.editButtonItem, nil];
     
     /*
@@ -46,6 +47,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView
      insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
     [self performSegueWithIdentifier:[self segueIdForShowObject] sender:self];
 }
 

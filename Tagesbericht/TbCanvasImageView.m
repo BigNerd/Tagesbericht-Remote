@@ -8,14 +8,17 @@
 
 #import "TbCanvasImageView.h"
 
+@interface TbCanvasImageView ()
+
+@property CGPoint location;
+
+@end
+
 @implementation TbCanvasImageView
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
     return self;
 }
 
@@ -32,7 +35,7 @@
 {
     UIGraphicsBeginImageContext(self.frame.size);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextClearRect(ctx, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
+    CGContextClearRect(ctx, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));
     self.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
@@ -55,9 +58,9 @@
     UITouch *touch = [touches anyObject];
     CGPoint currentLocation = [touch locationInView:self];
     
-    UIGraphicsBeginImageContext(self.frame.size);
+    UIGraphicsBeginImageContext(self.bounds.size);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [self.image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [self.image drawInRect:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
     CGContextSetLineCap(ctx, kCGLineCapRound);
     CGContextSetLineWidth(ctx, 5.0);
     CGContextSetRGBStrokeColor(ctx, 0.0, 0.0, 0.0, 1.0);

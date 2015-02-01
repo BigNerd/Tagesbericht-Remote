@@ -15,16 +15,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, strong) NSPersistentStoreCoordinator *dataStore;
-@property (nonatomic, strong) NSManagedObjectModel *dataModel;
-@property (nonatomic, strong) NSManagedObjectContext *dataContext;
-
-@property (nonatomic, strong) NSMutableArray *tagesberichte;
-
-- (NSPersistentStoreCoordinator*)dataStoreForModel:(NSManagedObjectModel*)model filename:(NSString*)filename;
+@property (strong, nonatomic) NSMutableArray *tagesberichte;
 
 - (Tagesbericht *) createTagesbericht;
 - (void) deleteTagesbericht:(Tagesbericht *)tagesbericht;
+
 - (Leistung *) createLeistung;
 - (void) deleteLeistung:(Leistung *)leistung;
 

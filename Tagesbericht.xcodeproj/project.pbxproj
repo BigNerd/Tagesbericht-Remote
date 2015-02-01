@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820A720D174FBA23000BA60E /* TbCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 820A720C174FBA22000BA60E /* TbCustomSegue.m */; };
+		824655C618084C960018F7D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 824655C518084C960018F7D5 /* InfoPlist.strings */; };
+		824656A2180993D70018F7D5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824656A1180993D70018F7D5 /* MainStoryboard.storyboard */; };
 		8282FD4217421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
 		8282FD4417421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
 		8282FD4617421C8100973852 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4517421C8100973852 /* CoreGraphics.framework */; };
@@ -23,7 +26,6 @@
 		8282FD7917421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD7717421C8100973852 /* InfoPlist.strings */; };
 		8282FD7C17421C8100973852 /* TagesberichtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD7B17421C8100973852 /* TagesberichtTests.m */; };
 		8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE517421F3200973852 /* InfoPlist.strings */; };
-		8282FE1C17421F3200973852 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE717421F3200973852 /* MainStoryboard.storyboard */; };
 		8282FE1D17421F3200973852 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE917421F3200973852 /* Icon.png */; };
 		8282FE1E17421F3200973852 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDEA17421F3200973852 /* Icon@2x.png */; };
 		8282FE1F17421F3200973852 /* Leistung.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDEC17421F3200973852 /* Leistung.m */; };
@@ -63,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		820A720B174FBA22000BA60E /* TbCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TbCustomSegue.h; sourceTree = "<group>"; };
+		820A720C174FBA22000BA60E /* TbCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TbCustomSegue.m; sourceTree = "<group>"; };
+		824655C518084C960018F7D5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		824656A1180993D70018F7D5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = Tagesbericht/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8282FD3E17421C8100973852 /* Tagesbericht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagesbericht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8282FD4117421C8100973852 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8282FD4317421C8100973852 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,7 +88,6 @@
 		8282FD7A17421C8100973852 /* TagesberichtTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagesberichtTests.h; sourceTree = "<group>"; };
 		8282FD7B17421C8100973852 /* TagesberichtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagesberichtTests.m; sourceTree = "<group>"; };
 		8282FDE617421F3200973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		8282FDE817421F3200973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8282FDE917421F3200973852 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8282FDEA17421F3200973852 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		8282FDEB17421F3200973852 /* Leistung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leistung.h; sourceTree = "<group>"; };
@@ -173,9 +178,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824655C418084C480018F7D5 /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				824655C518084C960018F7D5 /* InfoPlist.strings */,
+			);
+			name = de.lproj;
+			sourceTree = "<group>";
+		};
 		8282FD3517421C8100973852 = {
 			isa = PBXGroup;
 			children = (
+				824656A1180993D70018F7D5 /* MainStoryboard.storyboard */,
 				8282FD4917421C8100973852 /* Tagesbericht */,
 				8282FD7417421C8100973852 /* TagesberichtTests */,
 				8282FD4017421C8100973852 /* Frameworks */,
@@ -209,8 +223,8 @@
 		8282FD4917421C8100973852 /* Tagesbericht */ = {
 			isa = PBXGroup;
 			children = (
+				824655C418084C480018F7D5 /* de.lproj */,
 				8282FE3D17422B0000973852 /* include */,
-				8282FDE717421F3200973852 /* MainStoryboard.storyboard */,
 				8282FDF317421F3200973852 /* Tagesbericht.xcdatamodeld */,
 				8282FDEF17421F3200973852 /* Settings.bundle */,
 				8282FDE417421F3200973852 /* en.lproj */,
@@ -244,6 +258,8 @@
 				8282FE0C17421F3200973852 /* TbObjectController.m */,
 				8282FE0F17421F3200973852 /* TbObjectListController.h */,
 				8282FE1017421F3200973852 /* TbObjectListController.m */,
+				820A720B174FBA22000BA60E /* TbCustomSegue.h */,
+				820A720C174FBA22000BA60E /* TbCustomSegue.m */,
 				8282FE1317421F3200973852 /* TbTagesberichtController.h */,
 				8282FE1417421F3200973852 /* TbTagesberichtController.m */,
 				8282FE1517421F3200973852 /* TbTagesberichtListController.h */,
@@ -400,10 +416,11 @@
 				8282FD5817421C8100973852 /* Default@2x.png in Resources */,
 				8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */,
 				8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */,
-				8282FE1C17421F3200973852 /* MainStoryboard.storyboard in Resources */,
+				824656A2180993D70018F7D5 /* MainStoryboard.storyboard in Resources */,
 				8282FE1D17421F3200973852 /* Icon.png in Resources */,
 				8282FE1E17421F3200973852 /* Icon@2x.png in Resources */,
 				8282FE2117421F3200973852 /* Settings.bundle in Resources */,
+				824655C618084C960018F7D5 /* InfoPlist.strings in Resources */,
 				8282FE2217421F3200973852 /* Tagesbericht-Html.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +477,7 @@
 				8282FE3517421F3200973852 /* TbTagesberichtListController.m in Sources */,
 				8282FE3617421F3200973852 /* TbTextController.m in Sources */,
 				8282FE3717421F3200973852 /* TbUnterschriftController.m in Sources */,
+				820A720D174FBA23000BA60E /* TbCustomSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,15 +522,6 @@
 				8282FDE617421F3200973852 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8282FDE717421F3200973852 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8282FDE817421F3200973852 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -577,15 +586,28 @@
 		8282FD8017421C8100973852 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -593,15 +615,28 @@
 		8282FD8117421C8100973852 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tagesbericht/Tagesbericht-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
