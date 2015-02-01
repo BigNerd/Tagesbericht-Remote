@@ -31,6 +31,25 @@
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:clearButton, nil];
     
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:sendButton, nil];
+    
+    // Exchange the equal height constraint for the 1/3 vs. 2/3 height constraint
+    for (NSLayoutConstraint *constraint in [[self view] constraints]) {
+        if ([constraint firstItem] == [self tagesberichtWebView]
+                && [constraint secondItem] == [self unterschriftImageView]
+                && [constraint firstAttribute] == NSLayoutAttributeHeight) {
+            //NSLog(@"%@", constraint);
+            
+            NSLayoutConstraint *newConstraint =
+                [NSLayoutConstraint constraintWithItem:[self tagesberichtWebView]
+                                             attribute:NSLayoutAttributeHeight
+                                             relatedBy:NSLayoutRelationEqual
+                                                toItem:[self unterschriftImageView]
+                                             attribute:NSLayoutAttributeHeight
+                                            multiplier:1.5 constant:0.0];
+            [[self view] removeConstraint:constraint];
+            [[self view] addConstraint:newConstraint];
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -149,9 +168,15 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd.MM.YYYY"];
+
+    // Test loading linked sources from the file system
+    //NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"Icon" ofType:@"png"];
+    //imagePath = [@"file://" stringByAppendingString:imagePath];
+    
     id data = @{
-        @"bericht": self.tagesbericht,
-        @"dateFormatter": dateFormatter
+        @"bericht" : self.tagesbericht
+        ,@"dateFormatter" : dateFormatter
+        //,@"imagePath" : imagePath
     };
     
     self.tagesberichtAsHTML = [template renderObject:data error:NULL];

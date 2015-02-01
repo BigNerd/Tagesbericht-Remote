@@ -49,8 +49,11 @@
 {
     [super viewDidLoad];
     
+    CGRect textFrame = [self.textTextField frame];
+    int y = textFrame.origin.y + textFrame.size.height;
+    
     self.autoSuggestTableView = [[UITableView alloc]
-                                 initWithFrame:CGRectMake(0, 50, 320, 120) style:UITableViewStylePlain];
+                                 initWithFrame:CGRectMake(0, y, 320, 120) style:UITableViewStylePlain];
     self.autoSuggestTableView.delegate = self;
     self.autoSuggestTableView.dataSource = self;
     self.autoSuggestTableView.scrollEnabled = YES;

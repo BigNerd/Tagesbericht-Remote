@@ -90,7 +90,22 @@
     
     [self.alleTagesberichte insertObject:tagesbericht atIndex:0];
     self.object = tagesbericht;
-    [self viewWillAppear:YES];
+    
+//    [UIView beginAnimations:@"egal" context:nil];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:[self view] cache:NO];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+//    [UIView commitAnimations];
+    
+    UIView *fromView = [self view];
+    UIView *toView = [self view];
+    UIView *containerView = [fromView superview];
+    [UIView transitionWithView:containerView
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionCurlUp
+                    animations:^{ [fromView removeFromSuperview]; [containerView addSubview:toView]; }
+                    completion:^(BOOL finished) {
+                        [self viewWillAppear:YES];}];
 }
 
 - (void)loadData
