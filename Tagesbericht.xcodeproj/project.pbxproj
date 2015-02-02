@@ -16,17 +16,12 @@
 		8282FD4817421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
 		8282FD4E17421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD4C17421C8100973852 /* InfoPlist.strings */; };
 		8282FD5017421C8100973852 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD4F17421C8100973852 /* main.m */; };
-		8282FD5617421C8100973852 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5517421C8100973852 /* Default.png */; };
-		8282FD5817421C8100973852 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5717421C8100973852 /* Default@2x.png */; };
-		8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD5917421C8100973852 /* Default-568h@2x.png */; };
 		8282FD6F17421C8100973852 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4117421C8100973852 /* UIKit.framework */; };
 		8282FD7017421C8100973852 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4317421C8100973852 /* Foundation.framework */; };
 		8282FD7117421C8100973852 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FD4717421C8100973852 /* CoreData.framework */; };
 		8282FD7917421C8100973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FD7717421C8100973852 /* InfoPlist.strings */; };
 		8282FD7C17421C8100973852 /* TagesberichtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FD7B17421C8100973852 /* TagesberichtTests.m */; };
 		8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE517421F3200973852 /* InfoPlist.strings */; };
-		8282FE1D17421F3200973852 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDE917421F3200973852 /* Icon.png */; };
-		8282FE1E17421F3200973852 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDEA17421F3200973852 /* Icon@2x.png */; };
 		8282FE1F17421F3200973852 /* Leistung.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDEC17421F3200973852 /* Leistung.m */; };
 		8282FE2017421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FDEE17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.m */; };
 		8282FE2117421F3200973852 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8282FDEF17421F3200973852 /* Settings.bundle */; };
@@ -50,6 +45,8 @@
 		8282FE3617421F3200973852 /* TbTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1817421F3200973852 /* TbTextController.m */; };
 		8282FE3717421F3200973852 /* TbUnterschriftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8282FE1A17421F3200973852 /* TbUnterschriftController.m */; };
 		8282FE4E17422B2600973852 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8282FE4D17422B2600973852 /* MessageUI.framework */; };
+		82ABE88D1A7EB74B00E2662A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE88C1A7EB74B00E2662A /* Images.xcassets */; };
+		82ABE88F1A7EBC7600E2662A /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE88E1A7EBC7600E2662A /* Images-2.xcassets */; };
 		82E02EFD1A7E78C000378394 /* libGRMustache7-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E02EFC1A7E78C000378394 /* libGRMustache7-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -77,17 +74,12 @@
 		8282FD4D17421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8282FD4F17421C8100973852 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tagesbericht-Prefix.pch"; sourceTree = "<group>"; };
-		8282FD5517421C8100973852 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		8282FD5717421C8100973852 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		8282FD5917421C8100973852 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8282FD6C17421C8100973852 /* TagesberichtTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagesberichtTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8282FD6C17421C8100973852 /* TagesberichtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TagesberichtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8282FD7617421C8100973852 /* TagesberichtTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TagesberichtTests-Info.plist"; sourceTree = "<group>"; };
 		8282FD7817421C8100973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8282FD7A17421C8100973852 /* TagesberichtTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagesberichtTests.h; sourceTree = "<group>"; };
 		8282FD7B17421C8100973852 /* TagesberichtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagesberichtTests.m; sourceTree = "<group>"; };
 		8282FDE617421F3200973852 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		8282FDE917421F3200973852 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		8282FDEA17421F3200973852 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		8282FDEB17421F3200973852 /* Leistung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leistung.h; sourceTree = "<group>"; };
 		8282FDEC17421F3200973852 /* Leistung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Leistung.m; sourceTree = "<group>"; };
 		8282FDED17421F3200973852 /* NSManagedObjectModel+KCOrderedAccessorFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+KCOrderedAccessorFix.h"; sourceTree = "<group>"; };
@@ -146,6 +138,8 @@
 		8282FE4B17422B0000973852 /* NSFormatter+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFormatter+GRMustache.h"; sourceTree = "<group>"; };
 		8282FE4C17422B0000973852 /* NSValueTransformer+GRMustache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GRMustache.h"; sourceTree = "<group>"; };
 		8282FE4D17422B2600973852 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		82ABE88C1A7EB74B00E2662A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		82ABE88E1A7EBC7600E2662A /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		82E02EFC1A7E78C000378394 /* libGRMustache7-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libGRMustache7-iOS.a"; path = "Tagesbericht/include/libGRMustache7-iOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8282FD3E17421C8100973852 /* Tagesbericht.app */,
-				8282FD6C17421C8100973852 /* TagesberichtTests.octest */,
+				8282FD6C17421C8100973852 /* TagesberichtTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +260,8 @@
 				8282FE1817421F3200973852 /* TbTextController.m */,
 				8282FE1917421F3200973852 /* TbUnterschriftController.h */,
 				8282FE1A17421F3200973852 /* TbUnterschriftController.m */,
+				82ABE88C1A7EB74B00E2662A /* Images.xcassets */,
+				82ABE88E1A7EBC7600E2662A /* Images-2.xcassets */,
 				8282FD4A17421C8100973852 /* Supporting Files */,
 			);
 			path = Tagesbericht;
@@ -279,11 +275,6 @@
 				8282FD4C17421C8100973852 /* InfoPlist.strings */,
 				8282FD4F17421C8100973852 /* main.m */,
 				8282FD5117421C8100973852 /* Tagesbericht-Prefix.pch */,
-				8282FDE917421F3200973852 /* Icon.png */,
-				8282FDEA17421F3200973852 /* Icon@2x.png */,
-				8282FD5517421C8100973852 /* Default.png */,
-				8282FD5717421C8100973852 /* Default@2x.png */,
-				8282FD5917421C8100973852 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -373,7 +364,7 @@
 			);
 			name = TagesberichtTests;
 			productName = TagesberichtTests;
-			productReference = 8282FD6C17421C8100973852 /* TagesberichtTests.octest */;
+			productReference = 8282FD6C17421C8100973852 /* TagesberichtTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -416,14 +407,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8282FD4E17421C8100973852 /* InfoPlist.strings in Resources */,
-				8282FD5617421C8100973852 /* Default.png in Resources */,
-				8282FD5817421C8100973852 /* Default@2x.png in Resources */,
-				8282FD5A17421C8100973852 /* Default-568h@2x.png in Resources */,
+				82ABE88F1A7EBC7600E2662A /* Images-2.xcassets in Resources */,
 				8282FE1B17421F3200973852 /* InfoPlist.strings in Resources */,
 				824656A2180993D70018F7D5 /* MainStoryboard.storyboard in Resources */,
-				8282FE1D17421F3200973852 /* Icon.png in Resources */,
-				8282FE1E17421F3200973852 /* Icon@2x.png in Resources */,
 				8282FE2117421F3200973852 /* Settings.bundle in Resources */,
+				82ABE88D1A7EB74B00E2662A /* Images.xcassets in Resources */,
 				824655C618084C960018F7D5 /* InfoPlist.strings in Resources */,
 				8282FE2217421F3200973852 /* Tagesbericht-Html.mustache in Resources */,
 			);
@@ -590,6 +578,8 @@
 		8282FD8017421C8100973852 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
@@ -606,7 +596,7 @@
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
@@ -623,6 +613,8 @@
 		8282FD8117421C8100973852 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
@@ -639,7 +631,7 @@
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "Tagesbericht/Tagesbericht-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../GRMustache/lib\"",
